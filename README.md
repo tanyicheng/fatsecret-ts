@@ -31,4 +31,8 @@ const fatSecret = new FatSecretClient(API_KEY, API_SECRET);
 ```
 
 ## Roadmap
-To be done
+- [x] Free API
+- [ ] Premium API
+- [ ] Tests
+- [ ] Git-hooks to lint before commit
+- [ ] Extended usage examples
