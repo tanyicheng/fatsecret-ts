@@ -1,4 +1,4 @@
-import BaseClient from './base';
+import { BaseClient } from './base/BaseClient';
 import { Food } from './types/Food';
 import { Recipe } from './types/Recipe';
 import { FoodListResult } from './types/FoodListResult';
