@@ -1,15 +1,15 @@
-import { addSeconds, isAfter } from 'date-fns';
-
-const guardInterval = 60 * 5;
+import { addSeconds, isBefore } from 'date-fns';
 
 export class AccessToken {
+  static guardInterval = 60 * 5;
+
   private readonly token;
 
   private readonly validUntil: Date;
 
   constructor(rawToken: string, expiresIn: number) {
     this.token = rawToken;
-    this.validUntil = addSeconds(new Date(), expiresIn - guardInterval);
+    this.validUntil = addSeconds(new Date(), expiresIn - AccessToken.guardInterval);
   }
 
   get bearer(): string {
@@ -17,6 +17,6 @@ export class AccessToken {
   }
 
   get isValid(): boolean {
-    return isAfter(new Date(), this.validUntil);
+    return isBefore(new Date(), this.validUntil);
   }
 }

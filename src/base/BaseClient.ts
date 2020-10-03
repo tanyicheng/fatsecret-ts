@@ -3,21 +3,21 @@ import * as FormData from 'form-data';
 import { AccessToken } from './AccessToken';
 import { APIResponseFormat, IOauth2Response, PostRequestParams } from './types';
 
-export default class BaseClient {
-  private readonly accessKey: string;
+export class BaseClient {
+  protected readonly accessKey: string;
 
-  private readonly sharedSecret: string;
+  protected readonly secretKey: string;
 
-  private token: AccessToken;
+  protected token: AccessToken;
 
-  private readonly format: APIResponseFormat;
+  protected readonly format: APIResponseFormat;
 
-  constructor(accessKey: string, sharedSecret: string, format: APIResponseFormat = 'json') {
-    if (!accessKey || !sharedSecret) {
+  constructor(accessKey: string, secretKey: string, format: APIResponseFormat = 'json') {
+    if (!accessKey || !secretKey) {
       throw new Error('Access and secret keys must be set');
     }
     this.accessKey = accessKey;
-    this.sharedSecret = sharedSecret;
+    this.secretKey = secretKey;
     this.format = format;
   }
 
@@ -37,21 +37,21 @@ export default class BaseClient {
     return response.data;
   }
 
-  get tokenIsValid(): boolean {
+  protected get tokenIsValid(): boolean {
     return this.token && this.token.isValid;
   }
 
-  async updateOAuthToken(): Promise<void> {
+  protected async updateOAuthToken(): Promise<void> {
     const { access_token: token, expires_in: expiresIn } = await this.getOAuthToken();
     this.token = new AccessToken(token, expiresIn);
   }
 
-  async getOAuthToken(): Promise<IOauth2Response> {
+  protected async getOAuthToken(): Promise<IOauth2Response> {
     const form = new FormData();
     form.append('grant_type', 'client_credentials');
     form.append('scope', 'basic');
 
-    const auth = Buffer.from(`${this.accessKey}:${this.sharedSecret}`).toString('base64');
+    const auth = Buffer.from(`${this.accessKey}:${this.secretKey}`).toString('base64');
     const response = await gaxios.request<IOauth2Response>({
       url: `https://${BaseClient.oAuthDomain()}/connect/token`,
       headers: {
@@ -64,15 +64,15 @@ export default class BaseClient {
     return response.data;
   }
 
-  static baseDomain(): string {
+  protected static baseDomain(): string {
     return 'fatsecret.com';
   }
 
-  static oAuthDomain(): string {
+  protected static oAuthDomain(): string {
     return `oauth.${this.baseDomain()}`;
   }
 
-  static platformDomain(): string {
+  protected static platformDomain(): string {
     return `platform.${this.baseDomain()}`;
   }
 }
