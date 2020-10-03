@@ -3,31 +3,12 @@
 > Fully typed high-level wrapper for [FatSecret API](https://platform.fatsecret.com/api/Default.aspx?screen=rapih)
 
 ## Usage example
-```typescript
-import * as util from 'util';
-import FatSecretClient from './src/FatSecretClient';
+See the example usage script inside `examples` directory.
 
-const fatSecret = new FatSecretClient(API_KEY, API_SECRET);
-
-(async function () {
-  const foods = await fatSecret.foodsSearch({ searchExpression: 'tea' });
-  console.log(util.inspect(foods, false, null, true));
-
-  const recipes = await fatSecret.recipesSearch({ searchExpression: 'cake' });
-  console.log(util.inspect(recipes, false, null, true));
-
-  const food = await fatSecret.foodGet(37885);
-  console.log(util.inspect(food, false, null, true));
-
-  const recipe = await fatSecret.recipeGet(41085157);
-  console.log(util.inspect(recipe, false, null, true));
-
-  const recipeTypes = await fatSecret.recipeTypesGet();
-  console.log(util.inspect(recipeTypes, false, null, true));
-})().catch((err) => {
-  console.error(err);
-});
-
+To run example just make a `.env` file and fill it with `ACCESS_KEY` and `SECRET_KEY` (see `.env.example`) and run commands below. 
+```shell script
+npm install
+npm run example
 ```
 
 ## Roadmap
@@ -35,4 +16,5 @@ const fatSecret = new FatSecretClient(API_KEY, API_SECRET);
 - [ ] Premium API
 - [ ] Tests
 - [ ] Git-hooks to lint before commit
-- [ ] Extended usage examples
+- [x] Extended usage examples
+- [ ] Run tests with Github Actions CI
