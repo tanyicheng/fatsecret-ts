@@ -12,6 +12,8 @@ export class FoodServing {
 
   readonly cholesterol: Decimal;
 
+  readonly addedSugars: Decimal;
+
   readonly fat: Decimal;
 
   readonly fiber: Decimal;
@@ -52,6 +54,7 @@ export class FoodServing {
     this.id = Number.parseInt(props.serving_id, 10);
     this.calcium = new Decimal(props.calcium);
     this.calories = new Decimal(props.calories);
+    this.addedSugars = new Decimal(props.added_sugars);
     this.measurementDescription = props.measurement_description;
     this.carbohydrate = new Decimal(props.carbohydrate);
     this.url = props.serving_url;

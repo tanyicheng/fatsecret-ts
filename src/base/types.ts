@@ -170,6 +170,7 @@ export interface IRawFoodsSearchResponse extends IRawListResponse {
 export interface IRawFoodServing {
   calcium: string;
   calories: string;
+  added_sugars: string;
   carbohydrate: string;
   cholesterol: string;
   fat: string;

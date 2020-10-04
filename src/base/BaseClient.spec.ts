@@ -50,14 +50,16 @@ describe('BaseClient class', () => {
   });
 
   test('authentication', async () => {
+    const jwtTokenMock = 'eyJhbGciOiJSUzI1NiIsImtZqcQ';
     nock('https://oauth.fatsecret.com').post('/connect/token').reply(200, {
-      access_token: 'eyJhbGciOiJSUzI1NiIsImtZqcQ',
+      access_token: jwtTokenMock,
       expires_in: 86400,
       token_type: 'Bearer',
       scope: 'basic',
     });
     nock('https://platform.fatsecret.com')
       .post('/rest/server.api')
+      .matchHeader('Authorization', `Bearer ${jwtTokenMock}`)
       .query({ method: 'foods.search', format: 'json' })
       .reply(200, {
         result: 'ok',

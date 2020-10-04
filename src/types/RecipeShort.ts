@@ -1,4 +1,4 @@
-import { Nutrition } from './Nutrition';
+import { RecipeNutrition } from './RecipeNutrition';
 import { IRawRecipeShort } from '../base/types';
 
 export class RecipeShort {
@@ -10,7 +10,7 @@ export class RecipeShort {
 
   readonly image: string;
 
-  readonly nutrition: Nutrition;
+  readonly nutrition: RecipeNutrition;
 
   readonly fatSecretUrl: string;
 
@@ -20,6 +20,6 @@ export class RecipeShort {
     this.image = props.recipe_image;
     this.description = props.recipe_description;
     this.fatSecretUrl = props.recipe_url;
-    this.nutrition = new Nutrition(props.recipe_nutrition);
+    this.nutrition = new RecipeNutrition(props.recipe_nutrition);
   }
 }

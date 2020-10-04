@@ -32,7 +32,7 @@ export class RecipeServing {
 
   readonly sugar: Decimal;
 
-  readonly transFat: string;
+  readonly transFat: Decimal;
 
   readonly vitaminA: Decimal;
 
@@ -55,7 +55,7 @@ export class RecipeServing {
     this.sugar = new Decimal(props.sugar);
     this.vitaminA = new Decimal(props.vitamin_a);
     this.vitaminC = new Decimal(props.vitamin_c);
+    this.transFat = new Decimal(props.trans_fat);
     this.servingSize = props.serving_size;
-    this.transFat = props.trans_fat;
   }
 }
