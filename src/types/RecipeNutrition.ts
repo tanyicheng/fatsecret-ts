@@ -1,14 +1,14 @@
 import Decimal from 'decimal.js';
 import { IRawRecipeShort } from '../base/types';
 
-export class Nutrition {
-  private fat: Decimal;
+export class RecipeNutrition {
+  readonly fat: Decimal;
 
-  private protein: Decimal;
+  readonly protein: Decimal;
 
-  private calories: Decimal;
+  readonly calories: Decimal;
 
-  private carbohydrate: Decimal;
+  readonly carbohydrate: Decimal;
 
   constructor(props: IRawRecipeShort['recipe_nutrition']) {
     this.fat = new Decimal(props.fat);
