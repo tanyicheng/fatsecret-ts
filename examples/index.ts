@@ -1,9 +1,10 @@
+/* eslint-disable no-console */
 import * as util from 'util';
 import FatSecretClient from '../src/FatSecretClient';
 
 const fatSecret = new FatSecretClient(process.env.ACCESS_KEY, process.env.SECRET_KEY);
 
-(async function () {
+(async () => {
   const foods = await fatSecret.foodsSearch({ searchExpression: 'tea' });
   console.log(util.inspect(foods, false, null, true));
 
