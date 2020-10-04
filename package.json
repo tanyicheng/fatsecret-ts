@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "example": "node -r ts-node/register -r dotenv/config examples/index.ts",
+    "lint": "eslint . --ext .ts",
     "test": "jest"
   },
   "author": "",
