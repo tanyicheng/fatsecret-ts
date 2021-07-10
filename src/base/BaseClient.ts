@@ -49,7 +49,8 @@ export class BaseClient {
   protected async getOAuthToken(): Promise<IOauth2Response> {
     const form = new FormData();
     form.append('grant_type', 'client_credentials');
-    form.append('scope', 'basic');
+    // form.append('scope', 'basic');
+    form.append('scope', 'localization');
 
     const auth = Buffer.from(`${this.accessKey}:${this.secretKey}`).toString('base64');
     const response = await gaxios.request<IOauth2Response>({

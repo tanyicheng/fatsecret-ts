@@ -17,6 +17,11 @@ interface IBaseSearchParams {
   page_number?: number;
 }
 
+interface IPremierParams extends IBaseParams, IBaseSearchParams {
+  region: string;
+  language: string;
+}
+
 export interface IBaseRecipesSearchParams extends IBaseParams, IBaseSearchParams {
   method: 'recipes.search';
   recipe_type?: string;
@@ -45,7 +50,8 @@ export type PostRequestParams =
   | IBaseFoodsSearchParams
   | IFoodGetParams
   | IRecipeGetParams
-  | IRecipeTypesGetParams;
+  | IRecipeTypesGetParams
+  | IPremierParams;
 
 export interface IRawFoodResponse {
   food_id: string;

@@ -31,6 +31,8 @@ export default class FatSecretClient {
       max_results: maxResults,
       ...params,
       method,
+      region: 'CN',
+      language: 'zh',
     });
 
     return new RecipeListResult(recipes);
@@ -50,6 +52,8 @@ export default class FatSecretClient {
       search_expression: searchExpression,
       ...params,
       method,
+      region: 'CN',
+      language: 'zh',
     });
 
     return new FoodListResult(foods);
@@ -61,8 +65,11 @@ export default class FatSecretClient {
     const { food } = await this.client.postRequest<{ food: IRawFoodResponse }>({
       method,
       food_id: foodId.toString(),
+      region: 'CN',
+      language: 'zh',
     });
-
+    console.log('x--x-x-')
+    console.log(food)
     return new Food(food);
   }
 
@@ -72,6 +79,8 @@ export default class FatSecretClient {
     const { recipe } = await this.client.postRequest<{ recipe: IRawRecipeResponse }>({
       method,
       recipe_id: recipeId.toString(),
+      region: 'CN',
+      language: 'zh',
     });
 
     return new Recipe(recipe);
@@ -84,6 +93,8 @@ export default class FatSecretClient {
       recipe_types: IRawRecipeTypesResponse;
     }>({
       method,
+      region: 'CN',
+      language: 'zh',
     });
 
     return recipeTypes?.recipe_type || [];

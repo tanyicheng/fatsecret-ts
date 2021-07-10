@@ -5,7 +5,8 @@ import FatSecretClient from '../src/FatSecretClient';
 const fatSecret = new FatSecretClient(process.env.ACCESS_KEY, process.env.SECRET_KEY);
 
 (async () => {
-  const foods = await fatSecret.foodsSearch({ searchExpression: 'tea' });
+  const foods = await fatSecret.foodsSearch({ searchExpression: '牛肉' });
+  // const foods = await fatSecret.foodsSearch({ searchExpression: 'tea' });
   console.log(util.inspect(foods, false, null, true));
 
   const recipes = await fatSecret.recipesSearch({ searchExpression: 'cake' });
