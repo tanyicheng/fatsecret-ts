@@ -1,0 +1,747 @@
+///opt/homebrew/bin/yarn run example
+//yarn run v1.22.17
+//$ node -r ts-node/register -r dotenv/config examples/index.ts
+"请求参数": {
+  page_number: 0,
+  max_results: 10,
+  search_expression: '牛肉',
+  method: 'foods.search',
+  region: 'CN',
+  language: 'zh'
+}
+response {
+  foods: {
+    food: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    max_results: '10',
+    page_number: '0',
+    total_results: '1000'
+  }
+}
+FoodListResult {
+  meta: ListMeta { maxResult: 10, pageNumber: 0, totalResult: 1000 },
+  data: [
+    FoodShort {
+      id: 2267,
+      name: 'Puerto Rican Style Stuffed Chicken, Drumstick or Breast (Muslo De Pollo O Pechuga Rellena)',
+      type: 'Generic',
+      brandName: null,
+      description: 'Per 1080g - Calories: 2398kcal | Fat: 78.84g | Carbs: 82.84g | Protein: 316.44g',
+      fatSecretUrl: 'https://www.fatsecret.com/calories-nutrition/generic/stuffed-chicken-drumstick-or-breast-puerto-rican-style-(muslo-de-pollo-o-pechuga-rellena)'
+    },
+    FoodShort {
+      id: 2734,
+      name: 'Bacon Cheeseburger with 1/4 Lb Meat, Tomato and/or Catsup on Bun',
+      type: 'Generic',
+      brandName: null,
+      description: 'Per 224g - Calories: 640kcal | Fat: 36.91g | Carbs: 35.94g | Protein: 39.14g',
+      fatSecretUrl: 'https://www.fatsecret.com/calories-nutrition/generic/bacon-cheeseburger-1-4-lb-meat-with-tomato-and-or-catsup-on-bun'
+    },
+    FoodShort {
+      id: 2750,
+      name: 'Hamburger with 1 Oz Meat on Miniature Bun',
+      type: 'Generic',
+      brandName: null,
+      description: 'Per 44g - Calories: 127kcal | Fat: 5.63g | Carbs: 11.18g | Protein: 7.25g',
+      fatSecretUrl: 'https://www.fatsecret.com/calories-nutrition/generic/hamburger-1-oz-meat-plain-on-miniature-bun'
+    },
+    FoodShort {
+      id: 803,
+      name: '1% Fat Milk',
+      type: 'Generic',
+      brandName: null,
+      description: 'Per 100g - Calories: 42kcal | Fat: 0.97g | Carbs: 4.99g | Protein: 3.37g',
+      fatSecretUrl: 'https://www.fatsecret.com/calories-nutrition/generic/milk-cows-fluid-1%25-fat'
+    },
+    FoodShort {
+      id: 808,
+      name: 'Lactose Reduced 1% Fat Milk',
+      type: 'Generic',
+      brandName: null,
+      description: 'Per 100g - Calories: 42kcal | Fat: 0.97g | Carbs: 4.99g | Protein: 3.37g',
+      fatSecretUrl: 'https://www.fatsecret.com/calories-nutrition/generic/milk-cows-fluid-lactose-reduced-1%25-fat'
+    },
+    FoodShort {
+      id: 1001,
+      name: 'Infant Formula (Good Start 2 Essentials, with Iron, from Powder)',
+      type: 'Generic',
+      brandName: null,
+      description: 'Per 69g - Calories: 44kcal | Fat: 1.81g | Carbs: 5.85g | Protein: 1.15g',
+      fatSecretUrl: 'https://www.fatsecret.com/calories-nutrition/generic/good-start-2-essentials-with-iron-infant-formula-prepared-from-powder-(formerly-carnation-follow-up-with-iron)'
+    },
+    FoodShort {
+      id: 3229,
+      name: 'Mexican Style Stewed Beans with Pork, Tomatoes and Chili Peppers (Frijoles A La Charra)',
+      type: 'Generic',
+      brandName: null,
+      description: 'Per 2188g - Calories: 3085kcal | Fat: 194.70g | Carbs: 211.10g | Protein: 124.47g',
+      fatSecretUrl: 'https://www.fatsecret.com/calories-nutrition/generic/stewed-beans-with-pork-tomatoes-and-chili-peppers-mexican-style-(frijoles-a-la-charra)'
+    },
+    FoodShort {
+      id: 4480,
+      name: 'Quick Oatmeal (1 or 3 Minutes)',
+      type: 'Generic',
+      brandName: null,
+      description: 'Per 278g - Calories: 173kcal | Fat: 2.84g | Carbs: 30.16g | Protein: 7.21g',
+      fatSecretUrl: 'https://www.fatsecret.com/calories-nutrition/generic/oatmeal-cooked-quick-(1-or-3-minutes)'
+    },
+    FoodShort {
+      id: 4904,
+      name: 'Ground Beef with Tomato Sauce on a Pizza Crust',
+      type: 'Generic',
+      brandName: null,
+      description: 'Per 98g - Calories: 295kcal | Fat: 11.86g | Carbs: 28.72g | Protein: 17.04g',
+      fatSecretUrl: 'https://www.fatsecret.com/calories-nutrition/generic/ground-beef-with-tomato-sauce-on-a-pizza-crust'
+    },
+    FoodShort {
+      id: 7238,
+      name: 'Frozen Whipped Gelatin on a Stick',
+      type: 'Generic',
+      brandName: null,
+      description: 'Per 100g - Calories: 62kcal | Fat: 0.00g | Carbs: 14.19g | Protein: 1.22g',
+      fatSecretUrl: 'https://www.fatsecret.com/calories-nutrition/generic/gelatin-frozen-whipped-on-a-stick'
+    }
+  ]
+}
+"请求参数": {
+  page_number: 0,
+  max_results: 20,
+  searchExpression: 'cake',
+  method: 'recipes.search',
+  region: 'CN',
+  language: 'zh'
+}
+response {
+  recipes: {
+    max_results: '20',
+    page_number: '0',
+    recipe: [
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object]
+    ],
+    total_results: '3825'
+  }
+}
+RecipeListResult {
+  meta: ListMeta { maxResult: 20, pageNumber: 0, totalResult: 3825 },
+  data: [
+    RecipeShort {
+      id: 79323110,
+      name: 'Viennese Waffles',
+      image: 'https://m.ftscrt.com/static/recipe/37df0108-1057-4a13-9ed8-d88afcc12108.jpg',
+      description: 'A low-calorie breakfast or snack with no added sugars.',
+      fatSecretUrl: 'https://www.fatsecret.com/recipes/79323110-viennese-waffles/Default.aspx',
+      nutrition: RecipeNutrition {
+        fat: 7.4,
+        protein: 4.3,
+        calories: 113,
+        carbohydrate: 7.77
+      }
+    },
+    RecipeShort {
+      id: 78448589,
+      name: 'Buffalo Chicken Chaffle',
+      image: 'https://m.ftscrt.com/static/recipe/e6448057-55fe-4264-9fee-69374ed5ceaf.jpg',
+      description: 'Savoury dish for brunch with low calorie content.',
+      fatSecretUrl: 'https://www.fatsecret.com/recipes/78448589-buffalo-chicken-chaffle/Default.aspx',
+      nutrition: RecipeNutrition {
+        fat: 15.75,
+        protein: 28.38,
+        calories: 256,
+        carbohydrate: 3.13
+      }
+    },
+    RecipeShort {
+      id: 78404629,
+      name: 'Banana Protein Oat Muffins',
+      image: 'https://m.ftscrt.com/static/recipe/bd7d1e92-5d79-4ef1-8ad5-55bc5b12b995.jpg',
+      description: 'Delicious post-workout snack fresh from the oven.',
+      fatSecretUrl: 'https://www.fatsecret.com/recipes/78404629-banana-protein-oat-muffins/Default.aspx',
+      nutrition: RecipeNutrition {
+        fat: 5.87,
+        protein: 6.99,
+        calories: 159,
+        carbohydrate: 20.12
+      }
+    },
+    RecipeShort {
+      id: 77718645,
+      name: 'Oatmeal Chocolate Chip Cookies',
+      image: 'https://m.ftscrt.com/static/recipe/9528c7db-8903-44b1-8d1c-6978070cb82b.jpg',
+      description: 'Sweet baked treat for snack.',
+      fatSecretUrl: 'https://www.fatsecret.com/recipes/77718645-oatmeal-chocolate-chip-cookies/Default.aspx',
+      nutrition: RecipeNutrition {
+        fat: 14.25,
+        protein: 3.42,
+        calories: 277,
+        carbohydrate: 35.41
+      }
+    },
+    RecipeShort {
+      id: 77584685,
+      name: 'Perfect Bars',
+      image: 'https://m.ftscrt.com/static/recipe/328f9bc6-cefc-42d6-86f3-453b5164149f.jpg',
+      description: 'The most perfect bars consist of peanut butter and chocolate chips.',
+      fatSecretUrl: 'https://www.fatsecret.com/recipes/77584685-perfect-bars/Default.aspx',
+      nutrition: RecipeNutrition {
+        fat: 16.41,
+        protein: 13.16,
+        calories: 259,
+        carbohydrate: 18.06
+      }
+    },
+    RecipeShort {
+      id: 76970858,
+      name: 'Turkey Chili',
+      image: 'https://m.ftscrt.com/static/recipe/8ad9405c-a4dd-46f3-abb4-6325bdc3bfab.jpg',
+      description: 'Quick and simple dish for dinner.',
+      fatSecretUrl: 'https://www.fatsecret.com/recipes/76970858-turkey-chili/Default.aspx',
+      nutrition: RecipeNutrition {
+        fat: 6.8,
+        protein: 29.51,
+        calories: 337,
+        carbohydrate: 37.48
+      }
+    },
+    RecipeShort {
+      id: 76958299,
+      name: 'Griddle Muffins',
+      image: 'https://m.ftscrt.com/static/recipe/14eeeba3-a96b-4601-af50-11b3346490b2.jpg',
+      description: 'An easy, make-ahead breakfast for the whole family.',
+      fatSecretUrl: 'https://www.fatsecret.com/recipes/76958299-griddle-muffins/Default.aspx',
+      nutrition: RecipeNutrition {
+        fat: 25.26,
+        protein: 19,
+        calories: 426,
+        carbohydrate: 29.35
+      }
+    },
+    RecipeShort {
+      id: 74649705,
+      name: 'Slaw Salad',
+      image: 'https://m.ftscrt.com/static/recipe/6cd26869-5239-4346-8d86-658a2600a24f.jpg',
+      description: 'Healthy, high-fiber dish.',
+      fatSecretUrl: 'https://www.fatsecret.com/recipes/74649705-slaw-salad/Default.aspx',
+      nutrition: RecipeNutrition {
+        fat: 3.81,
+        protein: 5.9,
+        calories: 139,
+        carbohydrate: 19.86
+      }
+    },
+    RecipeShort {
+      id: 76292273,
+      name: 'Blueberry Oatmeal Muffins',
+      image: 'https://m.ftscrt.com/static/recipe/2e10ecfa-2e77-45f8-af32-1924167b9efb.jpg',
+      description: 'Tasty, low-calorie baked snack.',
+      fatSecretUrl: 'https://www.fatsecret.com/recipes/76292273-blueberry-oatmeal-muffins/Default.aspx',
+      nutrition: RecipeNutrition {
+        fat: 7.42,
+        protein: 4.46,
+        calories: 152,
+        carbohydrate: 17.1
+      }
+    },
+    RecipeShort {
+      id: 75781136,
+      name: 'Chicken Lettuce Cups',
+      image: 'https://m.ftscrt.com/static/recipe/e25c18fe-c116-4fad-a4f4-24e17b8268b1.jpg',
+      description: 'Tasty, low-calorie dish for lunch or dinner.',
+      fatSecretUrl: 'https://www.fatsecret.com/recipes/75781136-chicken-lettuce-cups/Default.aspx',
+      nutrition: RecipeNutrition {
+        fat: 2.47,
+        protein: 4.53,
+        calories: 58,
+        carbohydrate: 4.54
+      }
+    },
+    RecipeShort {
+      id: 75538362,
+      name: 'Oat Clusters',
+      image: 'https://m.ftscrt.com/static/recipe/e3748f57-cb32-409e-aaa2-ede9d66ccdea.jpg',
+      description: 'Delicious snack using 5 ingredients.',
+      fatSecretUrl: 'https://www.fatsecret.com/recipes/75538362-oat-clusters/Default.aspx',
+      nutrition: RecipeNutrition {
+        fat: 13.36,
+        protein: 7.29,
+        calories: 216,
+        carbohydrate: 23.35
+      }
+    },
+    RecipeShort {
+      id: 75496186,
+      name: 'Oat Flax Waffles',
+      image: 'https://m.ftscrt.com/static/recipe/afd9d7bc-8d2c-474b-8771-17c4cd4802ae.jpg',
+      description: 'Low-calorie breakfast or snack.',
+      fatSecretUrl: 'https://www.fatsecret.com/recipes/75496186-oat-flax-waffles/Default.aspx',
+      nutrition: RecipeNutrition {
+        fat: 9.51,
+        protein: 12.11,
+        calories: 228,
+        carbohydrate: 26.7
+      }
+    },
+    RecipeShort {
+      id: 75297529,
+      name: 'Couscous Cranberry Orange Salad',
+      image: 'https://m.ftscrt.com/static/recipe/50e4dc9d-cc69-4c86-bc21-71070f5aedeb.jpg',
+      description: 'Healthy salad dish for lunch or dinner.',
+      fatSecretUrl: 'https://www.fatsecret.com/recipes/75297529-couscous-cranberry-orange-salad/Default.aspx',
+      nutrition: RecipeNutrition {
+        fat: 16.18,
+        protein: 10.39,
+        calories: 355,
+        carbohydrate: 42.99
+      }
+    },
+    RecipeShort {
+      id: 75086043,
+      name: 'Turkey Meatloaf',
+      image: 'https://m.ftscrt.com/static/recipe/e43e07a6-38e4-41bf-93c5-1892b4904fe8.jpg',
+      description: 'Delicious, low-sugar dish for lunch or dinner.',
+      fatSecretUrl: 'https://www.fatsecret.com/recipes/75086043-turkey-meatloaf/Default.aspx',
+      nutrition: RecipeNutrition {
+        fat: 12.54,
+        protein: 32.18,
+        calories: 296,
+        carbohydrate: 10.56
+      }
+    },
+    RecipeShort {
+      id: 75050099,
+      name: 'Pumpkin Protein Muffins',
+      image: 'https://m.ftscrt.com/static/recipe/8fa80359-30df-4ac9-8fd7-77b95eef3435.jpg',
+      description: 'Moist baked treat for any time of the day.',
+      fatSecretUrl: 'https://www.fatsecret.com/recipes/75050099-pumpkin-protein-muffins/Default.aspx',
+      nutrition: RecipeNutrition {
+        fat: 6.05,
+        protein: 9.82,
+        calories: 145,
+        carbohydrate: 14.59
+      }
+    },
+    RecipeShort {
+      id: 74929795,
+      name: 'Yogurt Cookies',
+      image: 'https://m.ftscrt.com/static/recipe/c8aef45a-67b3-4ddb-afdc-9b76b0fc6e1a.jpg',
+      description: 'Tasty baked treat for snack.',
+      fatSecretUrl: 'https://www.fatsecret.com/recipes/74929795-yogurt-cookies/Default.aspx',
+      nutrition: RecipeNutrition {
+        fat: 1.4,
+        protein: 3.13,
+        calories: 53,
+        carbohydrate: 7.93
+      }
+    },
+    RecipeShort {
+      id: 74774954,
+      name: 'Banana Muffins',
+      image: 'https://m.ftscrt.com/static/recipe/90151341-ab59-45a9-9619-3c57ebad70b9.jpg',
+      description: 'Gluten-free baked snack with low calories.',
+      fatSecretUrl: 'https://www.fatsecret.com/recipes/74774954-banana-muffins/Default.aspx',
+      nutrition: RecipeNutrition {
+        fat: 16.35,
+        protein: 7.9,
+        calories: 216,
+        carbohydrate: 12.09
+      }
+    },
+    RecipeShort {
+      id: 74387556,
+      name: 'Coconut Banana Oats',
+      image: 'https://m.ftscrt.com/static/recipe/fbed9ea5-c48a-4634-b6de-98a606bca777.jpg',
+      description: 'A satisfying breakfast to start your day.',
+      fatSecretUrl: 'https://www.fatsecret.com/recipes/74387556-coconut-banana-oats/Default.aspx',
+      nutrition: RecipeNutrition {
+        fat: 12.4,
+        protein: 13.78,
+        calories: 391,
+        carbohydrate: 59.46
+      }
+    },
+    RecipeShort {
+      id: 74382896,
+      name: 'Karela Fry',
+      image: 'https://m.ftscrt.com/static/recipe/a5499345-b4a8-4626-9836-5223905ea38a.jpg',
+      description: 'An Indian dish using bitter gourd.',
+      fatSecretUrl: 'https://www.fatsecret.com/recipes/74382896-karela-fry/Default.aspx',
+      nutrition: RecipeNutrition {
+        fat: 4.23,
+        protein: 1.44,
+        calories: 66,
+        carbohydrate: 7.07
+      }
+    },
+    RecipeShort {
+      id: 74298218,
+      name: 'Egg Bites',
+      image: 'https://m.ftscrt.com/static/recipe/12434c88-0296-4df8-a4cf-5267d101459f.jpg',
+      description: 'Delicious breakfast or snack fresh from the oven.',
+      fatSecretUrl: 'https://www.fatsecret.com/recipes/74298218-egg-bites/Default.aspx',
+      nutrition: RecipeNutrition {
+        fat: 5.74,
+        protein: 7.36,
+        calories: 93,
+        carbohydrate: 1.99
+      }
+    }
+  ]
+}
+"请求参数": { method: 'food.get.v2', food_id: '892', region: 'CN', language: 'zh' }
+response {
+  food: {
+    food_id: '892',
+    food_name: 'Hot Chocolate Cocoa (Made with Whole Milk)',
+    food_type: 'Generic',
+    food_url: 'https://www.fatsecret.com/calories-nutrition/generic/cocoa-hot-chocolate-not-from-dry-mix-made-with-whole-milk',
+    servings: { serving: [Array] }
+  }
+}
+x--x-x-
+{
+  food_id: '892',
+  food_name: 'Hot Chocolate Cocoa (Made with Whole Milk)',
+  food_type: 'Generic',
+  food_url: 'https://www.fatsecret.com/calories-nutrition/generic/cocoa-hot-chocolate-not-from-dry-mix-made-with-whole-milk',
+  servings: { serving: [ [Object], [Object], [Object], [Object], [Object] ] }
+}
+Food {
+  id: 892,
+  name: 'Hot Chocolate Cocoa (Made with Whole Milk)',
+  type: 'Generic',
+  fatSecretUrl: 'https://www.fatsecret.com/calories-nutrition/generic/cocoa-hot-chocolate-not-from-dry-mix-made-with-whole-milk',
+  servings: [
+    FoodServing {
+      id: 104,
+      calcium: 275,
+      calories: 190,
+      measurementDescription: 'cup',
+      carbohydrate: 29.9,
+      url: 'https://www.fatsecret.com/calories-nutrition/generic/cocoa-hot-chocolate-not-from-dry-mix-made-with-whole-milk?portionid=104&portionamount=1.000',
+      cholesterol: 17,
+      fat: 5.47,
+      metricServingUnit: 'g',
+      fiber: 2.3,
+      iron: 1,
+      metricServingAmount: 250,
+      monounsaturatedFat: 1.52,
+      numberOfUnits: 1,
+      description: '1 cup',
+      polyunsaturatedFat: 0.263,
+      potassium: 440,
+      protein: 8.8,
+      saturatedFat: 3.308,
+      sodium: 95,
+      sugar: 27.4,
+      vitaminA: 105,
+      vitaminC: 0.3
+    },
+    FoodServing {
+      id: 1136494,
+      calcium: 116,
+      calories: 80,
+      measurementDescription: 'ml',
+      carbohydrate: 12.62,
+      url: 'https://www.fatsecret.com/calories-nutrition/generic/cocoa-hot-chocolate-not-from-dry-mix-made-with-whole-milk?portionid=1136494&portionamount=100.000',
+      cholesterol: 7,
+      fat: 2.31,
+      metricServingUnit: 'g',
+      fiber: 0.9,
+      iron: 0.42,
+      metricServingAmount: 105.5,
+      monounsaturatedFat: 0.641,
+      numberOfUnits: 100,
+      description: '100 ml',
+      polyunsaturatedFat: 0.111,
+      potassium: 186,
+      protein: 3.71,
+      saturatedFat: 1.396,
+      sodium: 40,
+      sugar: 11.56,
+      vitaminA: 44,
+      vitaminC: 0.1
+    },
+    FoodServing {
+      id: 49572,
+      calcium: 110,
+      calories: 76,
+      measurementDescription: 'g',
+      carbohydrate: 11.96,
+      url: 'https://www.fatsecret.com/calories-nutrition/generic/cocoa-hot-chocolate-not-from-dry-mix-made-with-whole-milk?portionid=49572&portionamount=100.000',
+      cholesterol: 7,
+      fat: 2.19,
+      metricServingUnit: 'g',
+      fiber: 0.9,
+      iron: 0.4,
+      metricServingAmount: 100,
+      monounsaturatedFat: 0.608,
+      numberOfUnits: 100,
+      description: '100 g',
+      polyunsaturatedFat: 0.105,
+      potassium: 176,
+      protein: 3.52,
+      saturatedFat: 1.323,
+      sodium: 38,
+      sugar: 10.96,
+      vitaminA: 42,
+      vitaminC: 0.1
+    },
+    FoodServing {
+      id: 239,
+      calcium: 34,
+      calories: 24,
+      measurementDescription: 'fl oz',
+      carbohydrate: 3.73,
+      url: 'https://www.fatsecret.com/calories-nutrition/generic/cocoa-hot-chocolate-not-from-dry-mix-made-with-whole-milk?portionid=239&portionamount=1.000',
+      cholesterol: 2,
+      fat: 0.68,
+      metricServingUnit: 'g',
+      fiber: 0.3,
+      iron: 0.12,
+      metricServingAmount: 31.2,
+      monounsaturatedFat: 0.19,
+      numberOfUnits: 1,
+      description: '1 fl oz',
+      polyunsaturatedFat: 0.033,
+      potassium: 55,
+      protein: 1.1,
+      saturatedFat: 0.413,
+      sodium: 12,
+      sugar: 3.42,
+      vitaminA: 13,
+      vitaminC: 0
+    },
+    FoodServing {
+      id: 105,
+      calcium: 275,
+      calories: 190,
+      ❓measurementDescription: 'serving (250g)',
+      carbohydrate: 29.9,
+      url: 'https://www.fatsecret.com/calories-nutrition/generic/cocoa-hot-chocolate-not-from-dry-mix-made-with-whole-milk?portionid=105&portionamount=1.000',
+      cholesterol: 17,
+      fat: 5.47,
+      metricServingUnit: 'g',
+      fiber: 2.3,
+      iron: 1,
+      metricServingAmount: 250,
+      monounsaturatedFat: 1.52,
+      numberOfUnits: 1,
+      description: '1 serving (250 g)',
+      polyunsaturatedFat: 0.263,
+      potassium: 440,
+      protein: 8.8,
+      saturatedFat: 3.308,
+      sodium: 95,
+      sugar: 27.4,
+      vitaminA: 105,
+      vitaminC: 0.3
+    }
+  ]
+}
+"请求参数": {
+  method: 'recipe.get',
+  recipe_id: '41085157',
+  region: 'CN',
+  language: 'zh'
+}
+response {
+  recipe: {
+    cooking_time_min: '35',
+    directions: { direction: [Array] },
+    ingredients: { ingredient: [Array] },
+    number_of_servings: '8',
+    preparation_time_min: '10',
+    recipe_categories: { recipe_category: [Array] },
+    recipe_description: 'Veggie frittatas that are low carb.',
+    recipe_id: '41085157',
+    recipe_images: {
+      recipe_image: 'https://m.ftscrt.com/static/recipe/21132562-9874-449b-97c4-42559d1c9e56.jpg'
+    },
+    recipe_name: 'Breakfast Frittatas',
+    recipe_types: { recipe_type: 'Breakfast' },
+    recipe_url: 'https://www.fatsecret.com/recipes/41085157-breakfast-frittatas/Default.aspx',
+    serving_sizes: { serving: [Object] }
+  }
+}
+Recipe {
+  id: 41085157,
+  fatSecretUrl: 'https://www.fatsecret.com/recipes/41085157-breakfast-frittatas/Default.aspx',
+  name: 'Breakfast Frittatas',
+  type: 'Breakfast',
+  description: 'Veggie frittatas that are low carb.',
+  image: 'https://m.ftscrt.com/static/recipe/21132562-9874-449b-97c4-42559d1c9e56.jpg',
+  cookingTimeMin: 35,
+  numberOfServings: 8,
+  preparationTimeMin: 10,
+  serving: RecipeServing {
+    calcium: 6,
+    calories: 172,
+    carbohydrate: 4.47,
+    cholesterol: 330,
+    fat: 11.3,
+    fiber: 0.8,
+    iron: 10,
+    monounsaturatedFat: 3.377,
+    polyunsaturatedFat: 1.193,
+    potassium: 298,
+    protein: 12.76,
+    saturatedFat: 4.58,
+    sodium: 153,
+    sugar: 1.62,
+    vitaminA: 29,
+    vitaminC: 25,
+    transFat: 0,
+    servingSize: '1 serving'
+  },
+  directions: [
+    RecipeDirection {
+      number: '1',
+      description: 'Chop kale, basil, and zucchini into small pieces. Cook kale, fresh basil, and diced zucchini in a pan until the kale begins to wilt.'
+    },
+    RecipeDirection {
+      number: '2',
+      description: 'Dice tomato and mozzarella. Place in greased oven dish and add contents from pan.'
+    },
+    RecipeDirection {
+      number: '3',
+      description: 'Crack one dozen eggs into a bowl and scramble. Add half and half and stir.'
+    },
+    RecipeDirection {
+      number: '4',
+      description: 'Pour egg mixture into oven dish and mix around until contents are spread evenly.'
+    },
+    RecipeDirection {
+      number: '5',
+      description: 'Place in over at 350 degrees and cook for 35 minutes.'
+    }
+  ],
+  ingredients: [
+    RecipeIngredient {
+      name: 'Fresh Mozzarella Cheese',
+      url: 'https://www.fatsecret.com/calories-nutrition/belgioioso/fresh-mozzarella-cheese?portionid=0&portionamount=3.000',
+      description: '3 oz fresh mozzarella cheese',
+      measurementDescription: 'serving',
+      foodId: 4184515,
+      servingId: 0,
+      numberOfUnits: 3
+    },
+    RecipeIngredient {
+      name: 'Tomatoes',
+      url: 'https://www.fatsecret.com/calories-nutrition/generic/tomatoes-raw?portionid=22644&portionamount=1.000',
+      description: '1 medium whole tomatoes',
+      measurementDescription: 'medium whole (2-3/5" dia)',
+      foodId: 6138,
+      servingId: 22644,
+      numberOfUnits: 1
+    },
+    RecipeIngredient {
+      name: 'Zucchini',
+      url: 'https://www.fatsecret.com/calories-nutrition/winn-dixie/zucchini?portionid=0&portionamount=1.000',
+      description: '1 serving zucchini',
+      measurementDescription: 'serving',
+      foodId: 12277309,
+      servingId: 0,
+      numberOfUnits: 1
+    },
+    RecipeIngredient {
+      name: 'Egg',
+      url: 'https://www.fatsecret.com/calories-nutrition/generic/egg-whole-raw?portionid=11206&portionamount=12.000',
+      description: '12 large egg',
+      measurementDescription: 'large',
+      foodId: 3092,
+      servingId: 11206,
+      numberOfUnits: 12
+    },
+    RecipeIngredient {
+      name: 'Cream (Half & Half)',
+      url: 'https://www.fatsecret.com/calories-nutrition/usda/cream-(half-and-half)?portionid=29277&portionamount=0.500',
+      description: '1/2 cup cream (half & half)',
+      measurementDescription: 'cup',
+      foodId: 33729,
+      servingId: 29277,
+      numberOfUnits: 0.5
+    },
+    RecipeIngredient {
+      name: 'Basil',
+      url: 'https://www.fatsecret.com/calories-nutrition/usda/basil?portionid=29645&portionamount=2.000',
+      description: '2 tbsps basil',
+      measurementDescription: 'tbsp',
+      foodId: 33905,
+      servingId: 29645,
+      numberOfUnits: 2
+    },
+    RecipeIngredient {
+      name: 'Kale',
+      url: 'https://www.fatsecret.com/calories-nutrition/usda/kale?portionid=34192&portionamount=2.000',
+      description: '2 cups chopped kale',
+      measurementDescription: 'cup, chopped',
+      foodId: 36398,
+      servingId: 34192,
+      numberOfUnits: 2
+    }
+  ],
+  category: [
+    RecipeCategory {
+      url: 'https://www.fatsecret.com/recipes/collections/meal/breakfast/Default.aspx',
+      name: 'Breakfast'
+    },
+    RecipeCategory {
+      url: 'https://www.fatsecret.com/recipes/collections/meal/breakfast/baked/Default.aspx',
+      name: 'Baked Breakfast'
+    },
+    RecipeCategory {
+      url: 'https://www.fatsecret.com/recipes/collections/meal/breakfast/egg/Default.aspx',
+      name: 'Breakfast Egg'
+    }
+  ]
+}
+"请求参数": { method: 'recipe_types.get', region: 'CN', language: 'zh' }
+response {
+  recipe_types: {
+    recipe_type: [
+      'Appetizer',
+      'Soup',
+      'Main Dish',
+      'Side Dish',
+      'Baked',
+      'Salad and Salad Dressing',
+      'Sauce and Condiment',
+      'Dessert',
+      'Snack',
+      'Beverage',
+      'Other',
+      'Breakfast',
+      'Lunch'
+    ]
+  }
+}
+[
+  'Appetizer',
+  'Soup',
+  'Main Dish',
+  'Side Dish',
+  'Baked',
+  'Salad and Salad Dressing',
+  'Sauce and Condiment',
+  'Dessert',
+  'Snack',
+  'Beverage',
+  'Other',
+  'Breakfast',
+  'Lunch'
+]
+✨  Done in 7.98s.
+
+Process finished with exit code 0
+
+
